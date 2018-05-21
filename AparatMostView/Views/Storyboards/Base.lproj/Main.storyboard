@@ -73,7 +73,10 @@
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                             <integer key="value" value="10"/>
                                                         </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                            <real key="value" value="0.69999999999999996"/>
+                                                        </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
@@ -126,7 +129,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.66369384949999999" green="0.65162668859999995" blue="0.67576101040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.83690900259067358" green="0.83267483358622907" blue="0.79347789235384758" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="zGH-ja-Ccj" firstAttribute="top" secondItem="7zY-Bx-pXX" secondAttribute="bottom" id="S2C-yv-oSy"/>
                             <constraint firstItem="7zY-Bx-pXX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SGg-nw-Wc9"/>
