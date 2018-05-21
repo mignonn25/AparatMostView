@@ -25,9 +25,45 @@ class VideoModel {
         return _PhotoUrl
     }
     
+    private var _videoframe:String!
+    var videoframe:String{
+        if _videoframe == nil {
+            _videoframe = ""
+        }
+        return _videoframe
+    }
     
-    init(title: String,url:String) {
+    private var _heroId:String!
+    var heroId:String{
+        if _heroId == nil {
+            _heroId = ""
+        }
+        return _heroId
+    }
+    
+    private var _date:String!
+    var date:String{
+        if _date == nil {
+            _date = ""
+        }
+        return _date
+    }
+    
+    private var _viewCount:Int!
+    var viewCount:Int{
+        if _viewCount == nil {
+            _viewCount = 0
+        }
+        return _viewCount
+    }
+    
+    
+    init(title: String,url:String,videoframe:String,heroId:String,date:String,viewCount:Int) {
         self._title = title
         self._PhotoUrl = url
+        self._videoframe = videoframe
+        self._heroId = heroId
+        self._date = date
+        self._viewCount = viewCount
     }
 }

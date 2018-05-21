@@ -27,6 +27,7 @@ class ViewController: UIViewController {
     
     var VideoData = [VideoModel]()
     var nextPageUrl = ""
+    var selectedVideoUrl = ""
     
     
     
@@ -43,10 +44,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+      
         collectionView.delegate = self
         collectionView.dataSource = self
         
         collectionView.collectionViewLayout = listLayout
+        
+        
         
         
         getSiteData(url: SITE_URL)
@@ -79,7 +84,14 @@ class ViewController: UIViewController {
                 // print("titles: \(title["title"])")
                 let title = data["title"].stringValue
                 let photoUrl = data["big_poster"].stringValue
-                VideoData.append(VideoModel(title: title, url: photoUrl))
+                let frame = data["frame"].stringValue
+                let uniqueId = data["uid"].stringValue
+                let date = data["sdate"].stringValue
+                let viewCount = data["visit_cnt"].intValue
+               // print(frame)
+                
+                VideoData.append(VideoModel(title: title, url: photoUrl, videoframe: frame, heroId: uniqueId, date: date, viewCount: viewCount))
+                
             }
             
         }
@@ -109,6 +121,26 @@ class ViewController: UIViewController {
         return true
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showVideo" {
+            if let videoVc = segue.destination as? PlayVideoVC {
+                
+                if let videoInfo = sender as? Dictionary<String, String> {
+                print("selected video: \(selectedVideoUrl)")
+                    videoVc.videoUrl = videoInfo["url"]!
+                    videoVc.uId = videoInfo["uId"]!
+                    videoVc.titleText = videoInfo["title"]!
+                    videoVc.posterUrl = videoInfo["posterUrl"]!
+                    videoVc.date = videoInfo["date"]!
+                    videoVc.viewCount = videoInfo["vCount"]!
+                    
+                }
+                
+            }
+            
+        }
+    }
+    
 
 }
 
@@ -119,6 +151,22 @@ class ViewController: UIViewController {
 extension ViewController: UICollectionViewDelegate {
     
   
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+       
+        let videoUrl = VideoData[indexPath.row].videoframe
+        let uniqueId = VideoData[indexPath.row].heroId
+        let videoTitle = VideoData[indexPath.row].title
+        let posterUrl = VideoData[indexPath.row].PhotoUrl
+        let date = VideoData[indexPath.row].date
+        let viewCount = VideoData[indexPath.row].viewCount
+        let videoInfo = ["url":videoUrl,"uId":uniqueId,"title":videoTitle,"posterUrl":posterUrl,"date":date,"vCount":String(viewCount)]
+        
+       
+        performSegue(withIdentifier: "showVideo", sender: videoInfo)
+        
+    }
+    
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if indexPath.row + 1  == VideoData.count {

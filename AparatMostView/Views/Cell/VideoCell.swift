@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Hero
 //import DisplaySwitcher
 
 
@@ -30,6 +31,10 @@ class VideoCell: UICollectionViewCell {
         titleLabel.text = model.title
         listTitleLabel.text = model.title
         
+        background.hero.id = "\(model.heroId)border"
+        listTitleLabel.hero.id = "\(model.heroId)listTitle"
+        posterImage.hero.id = "\(model.heroId)poster"
+        
       //  let url = URL(string: model.PhotoUrl)
        // posterImage.load(url: url!)
     }
@@ -46,7 +51,9 @@ class VideoCell: UICollectionViewCell {
         listTitleLabel.alpha = 0
         listTitleTrailingCons.constant = 0
         titleListLeadingConstraint.constant = 0
+        
         posterWidthConst.constant = 200
+        
         
     }
     

@@ -18,6 +18,7 @@
 		863D6BFA20B1B060006B2D15 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863D6BF920B1B060006B2D15 /* Extentions.swift */; };
 		863D6C2120B31A86006B2D15 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863D6C2020B31A86006B2D15 /* ShadowView.swift */; };
 		863D6C2420B320D4006B2D15 /* Shabnam.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 863D6C2320B320D4006B2D15 /* Shabnam.ttf */; };
+		863D6C2620B3252B006B2D15 /* PlayVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863D6C2520B3252B006B2D15 /* PlayVideoVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		863D6C1D20B31622006B2D15 /* AparatMostView-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AparatMostView-Bridging-Header.h"; sourceTree = "<group>"; };
 		863D6C2020B31A86006B2D15 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		863D6C2320B320D4006B2D15 /* Shabnam.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Shabnam.ttf; sourceTree = "<group>"; };
+		863D6C2520B3252B006B2D15 /* PlayVideoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayVideoVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				863D6BE220B15C80006B2D15 /* ViewController.swift */,
+				863D6C2520B3252B006B2D15 /* PlayVideoVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-AparatMostView/Pods-AparatMostView-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/DisplaySwitcher/DisplaySwitcher.framework",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
@@ -240,6 +244,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DisplaySwitcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -276,6 +281,7 @@
 				863D6C2120B31A86006B2D15 /* ShadowView.swift in Sources */,
 				863D6BE320B15C80006B2D15 /* ViewController.swift in Sources */,
 				863D6BE120B15C80006B2D15 /* AppDelegate.swift in Sources */,
+				863D6C2620B3252B006B2D15 /* PlayVideoVC.swift in Sources */,
 				863D6BFA20B1B060006B2D15 /* Extentions.swift in Sources */,
 				863D6BF320B15E9D006B2D15 /* VideoCell.swift in Sources */,
 				863D6BF520B16EA0006B2D15 /* VideosModel.swift in Sources */,

@@ -10,5 +10,6 @@ pod 'Alamofire', '~> 4.7'
 pod 'SwiftyJSON', '~> 4.0'
 pod ‘DisplaySwitcher’, '~> 1.0’
 pod 'SDWebImage', '~> 4.0'
+pod "Hero", :git => 'https://github.com/lkzhao/Hero.git', :branch => 'master'
 
 end
