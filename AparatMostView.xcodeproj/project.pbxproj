@@ -17,6 +17,7 @@
 		863D6BF520B16EA0006B2D15 /* VideosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863D6BF420B16EA0006B2D15 /* VideosModel.swift */; };
 		863D6BFA20B1B060006B2D15 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863D6BF920B1B060006B2D15 /* Extentions.swift */; };
 		863D6C2120B31A86006B2D15 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863D6C2020B31A86006B2D15 /* ShadowView.swift */; };
+		863D6C2420B320D4006B2D15 /* Shabnam.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 863D6C2320B320D4006B2D15 /* Shabnam.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		863D6BF920B1B060006B2D15 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		863D6C1D20B31622006B2D15 /* AparatMostView-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AparatMostView-Bridging-Header.h"; sourceTree = "<group>"; };
 		863D6C2020B31A86006B2D15 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		863D6C2320B320D4006B2D15 /* Shabnam.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Shabnam.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 		863D6BDF20B15C80006B2D15 /* AparatMostView */ = {
 			isa = PBXGroup;
 			children = (
+				863D6C2220B320BB006B2D15 /* Font */,
 				863D6BE020B15C80006B2D15 /* AppDelegate.swift */,
 				863D6BF920B1B060006B2D15 /* Extentions.swift */,
 				863D6BF820B174DF006B2D15 /* Controller */,
@@ -123,6 +126,14 @@
 				863D6BE920B15C80006B2D15 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		863D6C2220B320BB006B2D15 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				863D6C2320B320D4006B2D15 /* Shabnam.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 		ACFD431E647F53ADB18B726D /* Frameworks */ = {
@@ -204,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				863D6BEB20B15C80006B2D15 /* LaunchScreen.storyboard in Resources */,
+				863D6C2420B320D4006B2D15 /* Shabnam.ttf in Resources */,
 				863D6BE820B15C80006B2D15 /* Assets.xcassets in Resources */,
 				863D6BE620B15C80006B2D15 /* Main.storyboard in Resources */,
 			);
