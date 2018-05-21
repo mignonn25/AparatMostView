@@ -9,7 +9,6 @@
 import UIKit
 //import DisplaySwitcher
 
-private let avatarListLayoutSize: CGFloat = 80.0
 
 class VideoCell: UICollectionViewCell {
     @IBOutlet weak var background: UIView!
@@ -18,23 +17,21 @@ class VideoCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     
    @IBOutlet weak var listTitleLabel: UILabel!
-    @IBOutlet weak var posterImageWidthConst: NSLayoutConstraint!
-    @IBOutlet weak var posterImageHeightConst: NSLayoutConstraint!
+   
     
     @IBOutlet weak var titleListLeadingConstraint: NSLayoutConstraint! 
     
     @IBOutlet weak var listTitleTrailingCons: NSLayoutConstraint!
     @IBOutlet weak var posterWidthConst: NSLayoutConstraint!
     
-    fileprivate var avatarGridLayoutSize: CGFloat = 0.0
-    fileprivate var initialLabelsLeadingConstraintValue: CGFloat = 0.0
+    
     
     func configCell(model: VideoModel) {
         titleLabel.text = model.title
         listTitleLabel.text = model.title
         
-        let url = URL(string: model.PhotoUrl)
-        posterImage.load(url: url!)
+      //  let url = URL(string: model.PhotoUrl)
+       // posterImage.load(url: url!)
     }
     
     func setUpListLayout() {

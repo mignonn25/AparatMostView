@@ -38,7 +38,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xQR-nt-HdY">
                                                     <rect key="frame" x="0.0" y="0.0" width="358" height="423"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="sIo-2C-9GI">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="sIo-2C-9GI">
                                                             <rect key="frame" x="0.0" y="0.5" width="358" height="358"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="sIo-2C-9GI" secondAttribute="height" multiplier="1:1" id="YQi-GP-Jny"/>
@@ -69,6 +69,12 @@
                                                         <constraint firstItem="4NH-Uo-3cG" firstAttribute="top" secondItem="sIo-2C-9GI" secondAttribute="bottom" constant="10" id="cOT-Ub-u0h"/>
                                                         <constraint firstItem="kzP-ON-Zuh" firstAttribute="centerY" secondItem="xQR-nt-HdY" secondAttribute="centerY" id="rHW-rJ-YpC"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
                                         </view>
@@ -90,7 +96,7 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7zY-Bx-pXX">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7zY-Bx-pXX" customClass="ShadowView" customModule="AparatMostView" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D1B-ng-q52">

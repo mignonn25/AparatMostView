@@ -150,7 +150,8 @@ extension ViewController:UICollectionViewDataSource {
             } else {
                 cell.setUpListLayout()
             }
-            cell.posterImage.image = UIImage(named: "default")
+            let url = URL(string: VideoData[indexPath.row].PhotoUrl)
+            cell.posterImage.sd_setImage(with: url!, placeholderImage: UIImage(named: "default"), options: .highPriority, completed: nil)
             cell.configCell(model: VideoData[indexPath.row])
             return cell
         }else {

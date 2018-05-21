@@ -16,6 +16,7 @@
 		863D6BF320B15E9D006B2D15 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863D6BF220B15E9C006B2D15 /* VideoCell.swift */; };
 		863D6BF520B16EA0006B2D15 /* VideosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863D6BF420B16EA0006B2D15 /* VideosModel.swift */; };
 		863D6BFA20B1B060006B2D15 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863D6BF920B1B060006B2D15 /* Extentions.swift */; };
+		863D6C2120B31A86006B2D15 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863D6C2020B31A86006B2D15 /* ShadowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		863D6BF220B15E9C006B2D15 /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		863D6BF420B16EA0006B2D15 /* VideosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosModel.swift; sourceTree = "<group>"; };
 		863D6BF920B1B060006B2D15 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
+		863D6C1D20B31622006B2D15 /* AparatMostView-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AparatMostView-Bridging-Header.h"; sourceTree = "<group>"; };
+		863D6C2020B31A86006B2D15 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,7 @@
 				863D6BF720B174D6006B2D15 /* Model */,
 				863D6BF620B174C6006B2D15 /* Views */,
 				863D6BEC20B15C80006B2D15 /* Info.plist */,
+				863D6C1D20B31622006B2D15 /* AparatMostView-Bridging-Header.h */,
 			);
 			path = AparatMostView;
 			sourceTree = "<group>";
@@ -83,6 +87,7 @@
 				863D6BFC20B1B149006B2D15 /* Storyboards */,
 				863D6BE720B15C80006B2D15 /* Assets.xcassets */,
 				863D6BFB20B1B130006B2D15 /* Cell */,
+				863D6C2020B31A86006B2D15 /* ShadowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -171,6 +176,7 @@
 				TargetAttributes = {
 					863D6BDC20B15C80006B2D15 = {
 						CreatedOnToolsVersion = 9.3.1;
+						LastSwiftMigration = 0930;
 					};
 				};
 			};
@@ -215,12 +221,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-AparatMostView/Pods-AparatMostView-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/DisplaySwitcher/DisplaySwitcher.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DisplaySwitcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				863D6C2120B31A86006B2D15 /* ShadowView.swift in Sources */,
 				863D6BE320B15C80006B2D15 /* ViewController.swift in Sources */,
 				863D6BE120B15C80006B2D15 /* AppDelegate.swift in Sources */,
 				863D6BFA20B1B060006B2D15 /* Extentions.swift in Sources */,
@@ -402,6 +411,7 @@
 			baseConfigurationReference = 0A850E9F5CE360B16498B27A /* Pods-AparatMostView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MYB8588MCL;
 				INFOPLIST_FILE = AparatMostView/Info.plist;
@@ -412,6 +422,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = bitbyterz.AparatMostView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AparatMostView/AparatMostView-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -422,6 +434,7 @@
 			baseConfigurationReference = 35E652190EB221A528008562 /* Pods-AparatMostView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MYB8588MCL;
 				INFOPLIST_FILE = AparatMostView/Info.plist;
@@ -432,6 +445,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = bitbyterz.AparatMostView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AparatMostView/AparatMostView-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
